@@ -17,7 +17,8 @@ defmodule VotingWeb.Admin.SessionControllerTest do
           "password" => "123123"
         })
 
-      assert %{"status" => "ok", "data" => %{"name" => "Jane Smith"}} = json_response(conn, 200)
+      assert %{"status" => "ok", "data" => %{"name" => "Jane Smith", "token" => _}} =
+               json_response(conn, 200)
     end
 
     test "returns 401 when admin email is invalid", %{conn: conn} do

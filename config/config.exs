@@ -29,3 +29,7 @@ config :phoenix, :json_library, Jason
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
+
+config :voting, VotingWeb.Guardian,
+  issuer: "voting_web",
+  secret_key: "wUPjfsWjxRfazO26OlC7zseqhKSjZV2W9FgPTEQBwaHKUKS1Pjscx2tsOK6n4jKH"
