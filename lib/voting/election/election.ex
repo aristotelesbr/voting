@@ -8,7 +8,7 @@ defmodule Voting.Election do
 
   schema "elections" do
     field :cover, :string
-    field :end_at, :naive_datetime
+    field :ends_at, :naive_datetime
     field :name, :string
     field :notice, :string
     field :starts_at, :naive_datetime

@@ -7,7 +7,7 @@ defmodule Voting.Repo.Migrations.CreateElections do
       add :cover, :string
       add :notice, :string
       add :starts_at, :naive_datetime, null: false
-      add :end_at, :naive_datetime, null: false
+      add :ends_at, :naive_datetime, null: false
       add :created_by, references(:administrators, on_delete: :nothing), null: false
 
       timestamps()
