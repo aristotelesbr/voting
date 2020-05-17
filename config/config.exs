@@ -33,3 +33,7 @@ import_config "#{Mix.env()}.exs"
 config :voting, VotingWeb.Guardian,
   issuer: "voting_web",
   secret_key: "wUPjfsWjxRfazO26OlC7zseqhKSjZV2W9FgPTEQBwaHKUKS1Pjscx2tsOK6n4jKH"
+
+  config :voting, VotingWeb.AuthAccessPipeline,
+  module: VotingWeb.Guardian,
+  error_handler: VotingWeb.AuthErrorHandler
