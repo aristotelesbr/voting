@@ -27,7 +27,6 @@ defmodule Voting.CreateElectionTest do
       assert election.created_by_id == admin.id
     end
 
-
     test "returns error when name is missing" do
       admin = insert(:admin)
 

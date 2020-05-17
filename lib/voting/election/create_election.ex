@@ -7,7 +7,7 @@ defmodule Voting.CreateElection do
   alias Voting.{Election, Repo}
 
   def run(params) do
-     %Election{}
+    %Election{}
     |> cast(params, [:name, :cover, :notice, :starts_at, :ends_at, :created_by_id])
     |> validate_required([:name, :starts_at, :ends_at, :created_by_id])
     |> validate_dates_overlap()
