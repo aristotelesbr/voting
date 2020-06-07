@@ -1,6 +1,4 @@
 defmodule Voting.Factory do
-  @moduledoc false
-
   use ExMachina.Ecto, repo: Voting.Repo
 
   def admin_factory do
